@@ -1,18 +1,14 @@
 // ✅ Import dependencies
-import dotenv from "dotenv";
 import mongoose from "mongoose";
 
-// ✅ Load environment variables
-dotenv.config();
-
-// ✅ Load API Keys
-const NEWSAPI_KEY = process.env.NEWSAPI_KEY;
-const GOOGLE_GEMINI_KEY = process.env.GOOGLE_GEMINI_KEY;
-const MONGO_URI = process.env.MONGO_URI;
+// ✅ Set API Keys Directly (Remove dotenv)
+const NEWSAPI_KEY = "c97b077b25054c63b59ff163f2a3cbc3";
+const GOOGLE_GEMINI_KEY = "AIzaSyBV1sUFbLuU1Lgfozf7h_xOJoA4pdEcKmQ";
+const MONGO_URI = "mongodb://localhost:27017/newsDB";
 
 // ✅ Validate API keys
 if (!NEWSAPI_KEY || !GOOGLE_GEMINI_KEY || !MONGO_URI) {
-    console.error("❌ Missing API keys. Check your .env file.");
+    console.error("❌ Missing API keys. Check your script.");
     process.exit(1);
 }
 
